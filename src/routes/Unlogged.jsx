@@ -6,7 +6,7 @@ import Login from "pages/auth/Login";
 import SignUp from "pages/auth/SignUp";
 import PasswordRecovery from "pages/auth/PasswordRecovery";
 
-export default function UnLogged() {
+export default function Unlogged() {
   return (
     <>
       <Route component={Login} exact path="/" />
