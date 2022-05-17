@@ -1,12 +1,10 @@
 // NPM packages
-import { BrowserRouter, Switch } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
 // Project files
+import Browser from "components/Browser";
 import { useUser } from "state/UserProvider";
 import { useAuth } from "state/AuthProvider";
 import { getDocument } from "scripts/firestore";
-import Logged from "routes/Logged";
-import Unlogged from "routes/Unlogged";
 import "./styles/style.css";
 
 export default function App() {
@@ -39,9 +37,9 @@ export default function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <Switch>{isLogged ? <Logged /> : <Unlogged />}</Switch>
-      </BrowserRouter>
+      {status === 0 && <p>loading</p>}
+      {status === 1 && <Browser isLogged={isLogged} />}
+      {status === 2 && <p>error</p>}
     </div>
   );
 }
