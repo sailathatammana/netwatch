@@ -1,9 +1,21 @@
-function App() {
+// NPM packages
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+// Project files
+import Login from "pages/auth/Login";
+import SignUp from "pages/auth/SignUp";
+import PasswordRecovery from "pages/auth/PasswordRecovery";
+import "./styles/style.css";
+
+export default function App() {
   return (
     <div className="App">
-      <h1>NetWatch</h1>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={Login} />
+          <Route path="/signup" component={SignUp} />
+          <Route path="/recovery" component={PasswordRecovery} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
-
-export default App;
