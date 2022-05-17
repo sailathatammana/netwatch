@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 // Project files
 import InputFields from "components/InputFields";
 import Footer from "components/Footer";
-import fields from "data/password-recovery.json";
+import fields from "data/auth/password-recovery.json";
 import { recoverPassword } from "scripts/authentification";
 
 export default function PasswordRecovery() {

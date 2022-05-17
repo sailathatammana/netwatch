@@ -7,7 +7,7 @@ import Header from "components/Header";
 import InputFields from "components/InputFields";
 import Footer from "components/Footer";
 import Checkbox from "components/Checkbox";
-import fields from "data/login.json";
+import fields from "data/auth/login.json";
 import { useUser } from "state/UserProvider";
 import { signIn } from "scripts/authentification";
 import { getDocument } from "scripts/firestore";
