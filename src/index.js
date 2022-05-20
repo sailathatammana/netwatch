@@ -1,21 +1,21 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 
 //Project Files
 import App from "./App";
 import { UserProvider } from "./state/UserProvider";
 import { AuthProvider } from "state/AuthProvider";
-import { TitleProvider } from "state/TitleProvider";
+import { ContentProvider } from "state/ContentProvider";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <AuthProvider>
       <UserProvider>
-        <TitleProvider>
+        <ContentProvider>
           <App />
-        </TitleProvider>
+        </ContentProvider>
       </UserProvider>
     </AuthProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById("root")
 );

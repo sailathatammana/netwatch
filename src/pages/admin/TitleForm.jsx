@@ -9,12 +9,12 @@ import InputImage from "components/InputImage";
 import fields from "data/create-title.json";
 import titleTypes from "./titleTypes";
 import { createDocument, updateDocument } from "scripts/firestore";
-import { useTitle } from "state/TitleProvider";
+import { useContent } from "state/ContentProvider";
 
 export default function TitleForm({ title, id }) {
   // Global state
   const history = useHistory();
-  const { titleDispatch } = useTitle();
+  const { titleDispatch } = useContent();
 
   // Local state
   const [form, setForm] = useState({

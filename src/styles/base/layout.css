@@ -35,3 +35,15 @@ h2 {
       "main"
       "footer"; */
 }
+
+.netflix-button {
+  margin: 18px 3% 0;
+  padding: 7px 17px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: normal;
+  color: #fff;
+  background-color: #e50914;
+  border-radius: 3px;
+  border: none;
+}
