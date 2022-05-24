@@ -3,9 +3,9 @@ import { useCallback, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 
 // Project files
-import TitleForm from "./TitleForm";
-import newTitle from "./newTitle";
-import TitlesTable from "./TitlesTable";
+import TitleForm from "./components/TitleForm";
+import newTitle from "./components/newTitle";
+import ContentItemsTable from "./components/ContentItemsTable";
 import BackButton from "components/BackButton";
 import { useContent } from "state/ContentProvider";
 import { getCollection, deleteDocument } from "scripts/firestore";
@@ -80,7 +80,11 @@ export default function CategoryDetails({ match }) {
       </header>
       <div className="page-content">
         {!editMode ? (
-          <TitlesTable titles={titles} onDelete={onDelete} onEdit={onEdit} />
+          <ContentItemsTable
+            contentItems={titles}
+            onDelete={onDelete}
+            onEdit={onEdit}
+          />
         ) : (
           <TitleForm
             title={currentTitle}
