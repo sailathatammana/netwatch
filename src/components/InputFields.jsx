@@ -1,7 +1,7 @@
 // Project files
 import InputField from "components/InputField";
 
-export default function InputFields({ fields, state }) {
+export default function InputFields({ fields, legend, state }) {
   const [form, setForm] = state;
 
   // Methods
@@ -20,5 +20,12 @@ export default function InputFields({ fields, state }) {
     />
   ));
 
-  return <>{InputFields}</>;
+  return (
+    <fieldset>
+      <legend>
+        <b>{legend}</b>
+      </legend>
+      {InputFields}
+    </fieldset>
+  );
 }
