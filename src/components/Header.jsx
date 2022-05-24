@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 // Project files
-import logo from "assets/images/logo.svg";
+import logo from "assets/images/logo.png";
 
 export default function Header() {
   return (

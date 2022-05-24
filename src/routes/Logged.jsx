@@ -10,7 +10,6 @@ import CategoryDetails from "pages/admin/CategoryDetails";
 
 export default function Logged() {
   const { user } = useUser();
-  console.log(user.role);
 
   return (
     <>
