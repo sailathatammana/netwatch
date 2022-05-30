@@ -17,6 +17,7 @@ export default function TitleForm({ title, category, state }) {
   const [form, setForm] = useState({
     id: title.id,
     name: title.name,
+    videoId: title.videoId,
     thumbImage: title.thumbUrl,
     mainImage: title.mainImageUrl,
     description: title.description,
@@ -34,6 +35,7 @@ export default function TitleForm({ title, category, state }) {
     const editedTitle = {
       type: category.name,
       name: form.name,
+      videoId: form.videoId || "",
       thumbUrl: form.thumbImage,
       mainImageUrl: form.mainImage,
       description: form.description,
@@ -83,7 +85,7 @@ export default function TitleForm({ title, category, state }) {
         label="Thumb"
         id="thumbImage"
         state={[form, setForm]}
-        filename={`${form.type}/thumbImage/${filename}`}
+        filename={`${form.type}/thumbImage/thumb-${filename}`}
       />
       <InputImage
         label="Main image"

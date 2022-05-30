@@ -5,6 +5,7 @@ import { BrowserRouter, Switch } from "react-router-dom";
 import Logged from "routes/Logged";
 import Unlogged from "routes/Unlogged";
 import Header from "./header/Header";
+import Footer from "./Footer";
 
 export default function Browser({ isLogged }) {
   return (
@@ -13,6 +14,7 @@ export default function Browser({ isLogged }) {
         <Header />
         <Switch>{isLogged ? <Logged /> : <Unlogged />}</Switch>
       </BrowserRouter>
+      <Footer />
     </>
   );
 }

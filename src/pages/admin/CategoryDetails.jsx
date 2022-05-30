@@ -33,7 +33,7 @@ export default function CategoryDetails({ match }) {
     try {
       const titles = await getCollection(url);
       setTitles(titles);
-      titleDispatch({ type: "READ_TITLE", payload: titles });
+      titleDispatch({ type: "READ_DATA", payload: titles });
       setStatus(1);
     } catch {
       setStatus(2);

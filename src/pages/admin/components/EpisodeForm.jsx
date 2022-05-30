@@ -27,7 +27,11 @@ export default function EpisodeForm({ episode, series, state }) {
   const [errorMessage, setErrorMessage] = useState("");
 
   // Constants
-  const filename = form.name.toLowerCase().split(" ").join("-");
+  const filename = `season-${form.season}-${form.name
+    .toLowerCase()
+    .split(" ")
+    .join("-")}`;
+  console.log("filename", filename);
   const [editModeState] = state;
 
   // Methods
@@ -111,7 +115,7 @@ export default function EpisodeForm({ episode, series, state }) {
       />
       <InputImage
         label="Thumb"
-        id="thumbImage"
+        id="thumbUrl"
         state={[form, setForm]}
         filename={`series/thumbImage/${filename}`}
       />

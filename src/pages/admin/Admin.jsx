@@ -19,7 +19,7 @@ export default function Admin() {
     try {
       const data = await getCollection(path);
 
-      categoryDispatch({ type: "READ_ALL_CATEGORIES", payload: data });
+      categoryDispatch({ type: "READ_DATA", payload: data });
       setStatus(1);
     } catch {
       setStatus(2);

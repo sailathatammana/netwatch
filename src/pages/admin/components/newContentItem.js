@@ -1,6 +1,7 @@
 export const newTitle = {
   id: "",
   name: "",
+  videoId: "",
   type: "",
   description: "",
   thumbUrl: "",
