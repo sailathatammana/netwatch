@@ -36,7 +36,7 @@ export default function App() {
   }, [fetchUser, uid]);
 
   return (
-    <div className="App">
+    <div className={`App mode-${isLogged ? "logged" : "unlogged"}`}>
       {status === 0 && <p>loading</p>}
       {status === 1 && <Browser isLogged={isLogged} />}
       {status === 2 && <p>error</p>}

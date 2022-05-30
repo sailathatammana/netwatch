@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 // Project files
-import Header from "components/Header";
 import InputFields from "components/InputFields";
 import Footer from "components/Footer";
 import Checkbox from "components/Checkbox";
@@ -55,7 +54,6 @@ export default function Login() {
             alt="Netflix movies"
           />
         </div>
-        <Header />
       </div>
 
       {/* Form */}

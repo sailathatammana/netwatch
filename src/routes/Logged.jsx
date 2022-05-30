@@ -14,12 +14,23 @@ export default function Logged() {
 
   return (
     <>
-      {user.role === "admin" && <Route component={Admin} path="/admin" />}
-      <Route exact path="/" component={Home} />
+      {user.role === "admin" ? (
+        <>
+          {/* Test */}
+          <Route exact path="/" component={Home} />
+
+          {/* <Route exact path="/" component={Admin} /> */}
+          <Route component={Admin} path="/admin" />
+          <Route path="/admin-categories/:id" component={CategoryDetails} />
+          <Route path="/series/:id" component={SeriesDetails} />
+        </>
+      ) : (
+        <>
+          <Route exact path="/" component={Home} />
+        </>
+      )}
       <Route component={Login} path="/login" />
       <Route component={SignUp} path="/signup" />
-      <Route path="/admin-categories/:id" component={CategoryDetails} />
-      <Route path="/series/:id" component={SeriesDetails} />
     </>
   );
 }
