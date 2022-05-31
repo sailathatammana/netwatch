@@ -4,7 +4,6 @@ import { Link, useHistory } from "react-router-dom";
 
 // Project files
 import InputFields from "components/InputFields";
-import Footer from "components/Footer";
 import Checkbox from "components/Checkbox";
 import fields from "data/auth/login.json";
 import { useUser } from "state/UserProvider";
@@ -84,7 +83,6 @@ export default function Login() {
           </div>
         </div>
       </div>
-      <Footer />
     </main>
   );
 }
