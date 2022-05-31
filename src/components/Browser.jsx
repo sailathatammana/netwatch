@@ -9,12 +9,12 @@ import Footer from "./Footer";
 
 export default function Browser({ isLogged }) {
   return (
-    <>
+    <div>
       <BrowserRouter>
         <Header />
         <Switch>{isLogged ? <Logged /> : <Unlogged />}</Switch>
       </BrowserRouter>
       <Footer />
-    </>
+    </div>
   );
 }

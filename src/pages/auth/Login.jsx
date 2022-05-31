@@ -50,7 +50,7 @@ export default function Login() {
           <img
             className="bg-image"
             srcSet={`${small} 1000w, ${medium} 1500w, ${large} 1800w`}
-            src={small}
+            src={medium}
             alt="Netflix movies"
           />
         </div>
