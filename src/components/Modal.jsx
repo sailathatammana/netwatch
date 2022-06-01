@@ -9,12 +9,14 @@ export default function Modal({ state }) {
 
   return ReactDom.createPortal(
     <>
-      <div className="modal-background" />
-      <div className="modal-window">
-        <button className="close-button" onClick={() => setChild(null)}>
-          X
-        </button>
-        {child}
+      <div className="portal-wrapper">
+        <div className="modal-background" />
+        <div className="modal-window">
+          <button className="close-button" onClick={() => setChild(null)}>
+            X
+          </button>
+          {child}
+        </div>
       </div>
     </>,
     document.getElementById("portal")
