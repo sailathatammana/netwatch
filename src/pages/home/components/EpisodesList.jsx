@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 // Project files
-// import { isEmptyObject } from "scripts/utils/utils";
 import SeasonsSelect from "./SeasonsSelect";
 
 export default function EpisodesList({ title }) {

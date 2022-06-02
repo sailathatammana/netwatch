@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 
 // Project files
 import InputFields from "components/InputFields";
-//import Footer from "components/Footer";
 import Checkbox from "components/Checkbox";
 import fields from "data/auth/signup.json";
 import { createAccount } from "scripts/authentification";
