@@ -24,7 +24,7 @@ export default function EpisodeForm({ episode, series, state }) {
     thumbUrl: episode.thumbUrl,
     seriesId: series.id,
   });
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage] = useState("");
 
   // Constants
   const filename = `season-${form.season}-${form.name

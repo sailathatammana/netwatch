@@ -38,9 +38,6 @@ export default function SecondaryNavigation({ userName }) {
           <div className="account-dropdown-sections">
             <div className="account-name">{userName}</div>
             <div className="sub-menu">
-              <a className="sub-menu-link" href="#">
-                Help center
-              </a>
               <button className="sign-out" onClick={onLogout}>
                 Sign out
               </button>

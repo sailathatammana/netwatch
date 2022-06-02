@@ -22,7 +22,7 @@ export default function TitleForm({ title, category, state }) {
     mainImage: title.mainImageUrl,
     description: title.description,
   });
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage] = useState("");
 
   // Constants
   const filename = form.name.toLowerCase().split(" ").join("-");
