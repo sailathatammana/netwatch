@@ -1,19 +1,15 @@
 //NPM Packages
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
 
 export default function SearchBar() {
   // Local state
   const [isActive, setIsActive] = useState(false);
   const [query, setQuery] = useState("");
 
-  // Property
-  const history = useHistory();
-
   // Methods
   function onSearch(event) {
     event.preventDefault();
-    history.push(`/results/${query}`);
+    // history.push(`/results/${query}`); // TO DO
   }
 
   return (

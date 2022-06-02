@@ -1,25 +1,36 @@
 // Project files
-import { useContent } from "state/ContentProvider";
+import { Link } from "react-router-dom";
 
-export default function NavBar() {
+export default function NavBar({ user }) {
+  // Properties
+  const isAdmin = user.role && user.role === "admin";
+
   return (
     <nav className="nav-bar">
       <ul className="primary-navigation">
         <li className="nav-item">
-          <a href="#home">Home</a>
+          <Link to="/">Home</Link>
         </li>
-        <li className="nav-item">
-          <a href="#series">Series</a>
-        </li>
-        <li className="nav-item">
-          <a href="#movies">Movies</a>
-        </li>
-        <li className="nav-item">
-          <a href="#documentaries">Documentaries</a>
-        </li>
-        <li className="nav-item">
-          <a href="#popular">Popular</a>
-        </li>
+        {!isAdmin ? (
+          <>
+            <li className="nav-item">
+              <a href="#series">Series</a>
+            </li>
+            <li className="nav-item">
+              <a href="#movies">Movies</a>
+            </li>
+            <li className="nav-item">
+              <a href="#documentaries">Documentaries</a>
+            </li>
+            <li className="nav-item">
+              <a href="#popular">Popular</a>
+            </li>
+          </>
+        ) : (
+          <li className="nav-item">
+            <Link to="/admin">Admin</Link>
+          </li>
+        )}
       </ul>
     </nav>
   );

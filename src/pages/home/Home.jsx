@@ -26,9 +26,9 @@ export default function Home() {
       <Hero />
       {status === 1 && (
         <div className="user-content">
-          <CategoryCards category={categories[0]} setModal={setModal} />
-          <CategoryCards category={categories[1]} setModal={setModal} />
-          <CategoryCards category={categories[2]} setModal={setModal} />
+          {categories.map((item) => (
+            <CategoryCards key={item.id} category={item} setModal={setModal} />
+          ))}
         </div>
       )}
       {/* Modal */}

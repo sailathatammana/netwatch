@@ -6,10 +6,12 @@ import NavBar from "./NavBar";
 import SecondaryNavigation from "./SecondaryNavigation";
 import logo from "assets/images/logo.png";
 import { useAuth } from "state/AuthProvider";
+import { useUser } from "state/UserProvider";
 
 export default function Header() {
   // Global state
   const { isLogged } = useAuth();
+  const { user } = useUser();
 
   return (
     <header className="netflix-header pinning-header">
@@ -20,8 +22,8 @@ export default function Header() {
           </Link>
           {isLogged && (
             <>
-              <NavBar />
-              <SecondaryNavigation />
+              <NavBar user={user} />
+              <SecondaryNavigation userName={user.name} />
             </>
           )}
         </div>

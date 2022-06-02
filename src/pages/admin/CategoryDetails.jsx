@@ -24,12 +24,12 @@ export default function CategoryDetails({ match }) {
 
   // Properties
   const routerID = match.params.id;
-
   const currentCategory = categories.find((item) => item.id === routerID);
   const path = `categories/${currentCategory.id}/items`;
 
   // Methods
   const fetchData = useCallback(async (url) => {
+    // Need to refactor to useFetch and check data
     try {
       const titles = await getCollection(url);
       setTitles(titles);
