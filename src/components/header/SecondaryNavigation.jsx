@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 // Project files
-import SearchBar from "./SeachBar";
 import userIcon from "assets/images/icons/user-icon.png";
 import { useAuth } from "state/AuthProvider";
 import { logout } from "scripts/authentification";
@@ -25,7 +24,6 @@ export default function SecondaryNavigation({ userName }) {
 
   return (
     <div className="secondary-navigation">
-      <SearchBar />
       <div className={`account-dropdown ${isOpened ? "open" : ""}`}>
         <button
           className="account-dropdown-button"

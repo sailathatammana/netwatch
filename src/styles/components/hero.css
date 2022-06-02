@@ -42,7 +42,7 @@
 .hero .description {
   position: absolute;
   top: 0;
-  bottom: 10%;
+  bottom: -10%;
   left: 4%;
   width: 36%;
   color: var(--color-white);
