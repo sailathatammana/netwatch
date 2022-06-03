@@ -98,4 +98,7 @@
   .mode-unlogged .netflix-header {
     padding: 0 5%;
   }
+  .nav-bar .primary-navigation {
+    font-size: 9.5px;
+  }
 }

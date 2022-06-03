@@ -8,9 +8,6 @@ export default function NavBar({ user }) {
   return (
     <nav className="nav-bar">
       <ul className="primary-navigation">
-        <li className="nav-item">
-          <Link to="/">Home</Link>
-        </li>
         {!isAdmin ? (
           <>
             <li className="nav-item">
@@ -22,14 +19,16 @@ export default function NavBar({ user }) {
             <li className="nav-item">
               <a href="#documentaries">Documentaries</a>
             </li>
-            <li className="nav-item">
-              <a href="#popular">Popular</a>
-            </li>
           </>
         ) : (
-          <li className="nav-item">
-            <Link to="/admin">Admin</Link>
-          </li>
+          <>
+            <li className="nav-item">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/admin">Admin</Link>
+            </li>
+          </>
         )}
       </ul>
     </nav>
