@@ -1,5 +1,5 @@
 // Project files
-import testHeroData from "./testHeroData"; // delete after refactoring
+import testHeroData from "./testHeroData";
 
 export default function Hero() {
   return (

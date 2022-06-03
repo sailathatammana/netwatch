@@ -33,7 +33,7 @@
 .title-name {
   margin-bottom: 10px;
   width: fit-content;
-  background: rgba(0, 0, 0, 0.4);
+  /*background: rgba(0, 0, 0, 0.4);*/
   font-size: 27px;
   line-height: 1.2;
 }
@@ -46,11 +46,10 @@
   background-color: var(--color-white);
   color: var(--color-black);
   z-index: 100;
-
   font-size: 16px;
   border: none;
   border-radius: 5px;
-  box-shadow: 0 0 4px 0 var(--color-black);
+  /* box-shadow: 0 0 4px 0 var(--color-black); */
 }
 
 .title-description {
