@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# 1. Netflix - clone
+# 1. NetWatch
 
 This is a Netflix clone that gives access to movies, series and documentaries. The Admin role can edit and can add a new movie, series and documentaries.
 
